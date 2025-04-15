@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhimHayFHD - Chi tiết phim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-top">
+        <div class="logo">
+          <h1>PhimHay<span>FHD</span></h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm phim, thể loại..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <button class="login-btn">
+            <i class="fas fa-user"></i> Đăng nhập
+          </button>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="favorite.html"
+              ><i class="fas fa-star"></i> Phim yêu thích</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Phần chi tiết phim -->
+    <div class="movie-details-container">
+      <div class="movie-details">
+        <div class="movie-poster">
+          <input type="hidden" id="movieId" value="a" />
+          <img src="a.jpg" alt="annabelle" />
+          <button
+            class="play-btn-large"
+            onclick="window.location.href='w6.html'"
+          >
+            <i class="fas fa-play"></i>
+            <p style="font-weight: bolder">Xem phim</p>
+          </button>
+        </div>
+        <div class="movie-info">
+          <h1>An-na-beo</h1>
+          <!-- Thay đổi phần meta-info -->
+          <div class="meta-info">
+            <span class="average-rating"
+              ><i class="fas fa-star"></i>
+              <span id="averageRating">0</span>/5</span
+            >
+            <span><i class="fas fa-clock"></i> 120 phút</span>
+            <span><i class="fas fa-calendar-alt"></i>Năm phát hành: 2014</span>
+          </div>
+          <div class="movie-actions">
+            <button id="addToFavoritesBtn" class="favorite-btn">
+              <i class="far fa-star"></i>
+              <span class="btn-text">Thêm vào yêu thích</span>
+            </button>
+          </div>
+          <h3 style="font-weight: bold">Thể loại</h3>
+          <div class="genres">
+            <span class="genre">Kinh Dị</span>
+          </div>
+          <h3>Giới thiệu</h3>
+          <p>
+            John, một người chồng trẻ, tặng vợ mình Sarah một con búp bê cổ
+            Annabelle nhân dịp sinh nhật. Ngay sau khi Annabelle được mang về
+            nhà, những hiện tượng kỳ bí bắt đầu xảy ra. Bầu không khí trong nhà
+            trở nên ngột ngạt, đồ đạc tự di chuyển, và Sarah thường xuyên bị
+            những cơn ác mộng quấy rầy. Càng ngày, những hiện tượng ma quái càng
+            trở nên dữ dội hơn. John và Sarah tìm đến sự giúp đỡ của Ed và
+            Lorraine Warren, những nhà điều tra huyền bí nổi tiếng. Ed và
+            Lorraine xác định rằng Annabelle bị ám bởi một linh hồn tà ác. Họ
+            phải chiến đấu với con quỷ để giải thoát cho John và Sarah khỏi sự
+            ám ảnh.
+          </p>
+          <h3>Diễn viên</h3>
+          <div class="cast-list">
+            <div class="cast-member">Annabelle Wallis</div>
+            <div class="cast-member">Ward Horton</div>
+            <div class="cast-member">Tony Amendola</div>
+            <div class="cast-member">Alfre Woodard</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phim tương tự -->
+      <section class="similar-movies">
+        <h2 class="section-title"><i class="fas fa-film"></i> Phim tương tự</h2>
+        <div class="movie-carousel">
+          <div class="movie-item">
+            <img src="saclo.webp" alt="Phim tâm lý 1" />
+            <div class="movie-overlay">
+              <h3>Sạc-lô<br />(Hài)</h3>
+              <button
+                class="play-btn"
+                onclick="window.location.href='sacl.html'"
+              >
+                <i class="fas fa-play"></i>
+                <p style="font-weight: bolder">Xem phim</p>
+              </button>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="a.jpg" alt="Phim tâm lý 2" />
+            <div class="movie-overlay">
+              <h3>An-na-beo<br />(Kinh dị)</h3>
+              <button
+                class="play-btn"
+                onclick="window.location.href='annabelle.html'"
+              >
+                <i class="fas fa-play"></i>
+                <p style="font-weight: bolder">Xem phim</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Thêm vào sau phần similar-movies trong movie-details.html -->
+      <section class="reviews-section">
+        <h2 class="section-title">
+          <i class="fas fa-comments"></i> Đánh giá phim
+        </h2>
+
+        <!-- Form đánh giá -->
+        <div class="review-form">
+          <form id="reviewForm">
+            <div class="rating-input">
+              <span>Đánh giá: </span>
+              <div class="stars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+              <input type="hidden" id="ratingValue" name="rating" value="0" />
+            </div>
+            <textarea
+              name="comment"
+              placeholder="Viết bình luận của bạn..."
+              required
+            ></textarea>
+            <button type="submit" class="submit-review">Gửi đánh giá</button>
+          </form>
+        </div>
+
+        <!-- Danh sách đánh giá -->
+        <div class="reviews-list">
+          <h3>Đánh giá từ người xem</h3>
+          <div id="reviewsContainer">
+            <!-- Các đánh giá sẽ được thêm vào đây bằng JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

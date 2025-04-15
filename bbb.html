@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhimHayFHD - Chi tiết phim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-top">
+        <div class="logo">
+          <h1>PhimHay<span>FHD</span></h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm phim, thể loại..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <button class="login-btn">
+            <i class="fas fa-user"></i> Đăng nhập
+          </button>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="favorite.html"
+              ><i class="fas fa-star"></i> Phim yêu thích</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Phần chi tiết phim -->
+    <div class="movie-details-container">
+      <div class="movie-details">
+        <div class="movie-poster">
+          <input type="hidden" id="movieId" value="bbb" />
+          <img src="bbb.jpg" alt="BbbGalaxy" />
+          <button
+            class="play-btn-large"
+            onclick="window.location.href='watch-movie.html'"
+          >
+            <i class="fas fa-play"></i>
+            <p style="font-weight: bolder">Xem phim</p>
+          </button>
+        </div>
+        <div class="movie-info">
+          <h1>Boboiboy Galaxy</h1>
+          <!-- Thay đổi phần meta-info -->
+          <div class="meta-info">
+            <span class="average-rating"
+              ><i class="fas fa-star"></i>
+              <span id="averageRating">0</span>/5</span
+            >
+            <span><i class="fas fa-clock"></i>21 - 23 phút/tập</span>
+            <span><i class="fas fa-calendar-alt"></i>Năm phát hành: 2016</span>
+          </div>
+          <div class="movie-actions">
+            <button id="addToFavoritesBtn" class="favorite-btn">
+              <i class="far fa-star"></i>
+              <span class="btn-text">Thêm vào yêu thích</span>
+            </button>
+          </div>
+          <h3 style="font-weight: bold">Thể loại</h3>
+          <div class="genres">
+            <span class="genre">Hoạt Hình</span>
+          </div>
+          <h3>Giới thiệu</h3>
+          <p>
+            Những Quả cầu năng lượng là những con robot công nghệ cao, chứa
+            nhiều năng lượng phức tạp. Thèm muốn bởi nhiều người, những con
+            robot này đã trôn rất kĩ ở các hành tinh trên khắp thiên hà. Từng
+            con robot một bị bắt cóc bởi những thế lực xấu xa. Và bây giờ, năng
+            lượng của chúng được sử dụng để reo rắc sự tàn phá và hủy diệt trên
+            khắp vũ trụ. Đây là bộ phim truyền hình nói về một siêu anh hùng của
+            Trái Đất...BoBoiBoy...với nhiệm vụ giải cứu các Quả cầu năng lượng
+            và bảo vệ thiên hà của chúng ta.
+          </p>
+          <h3>Diễn viên</h3>
+          <div class="cast-list">
+            <div class="cast-member">Nizam Razak</div>
+            <div class="cast-member">Anas Abdul Aziz</div>
+            <div class="cast-member">Nur Fat</div>
+            <div class="cast-member">Michael Gough</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phim tương tự -->
+      <section class="similar-movies">
+        <h2 class="section-title"><i class="fas fa-film"></i> Phim tương tự</h2>
+        <div class="movie-carousel">
+          <div class="movie-item">
+            <img src="sl.jpg" alt="Phim hoạt hình 1" />
+            <div class="movie-overlay">
+              <h3>Solo Leveling</h3>
+              <button class="play-btn" onclick="window.location.href='sl.html'">
+                <i class="fas fa-play"></i>
+                <p style="font-weight: bolder">Xem phim</p>
+              </button>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="m.jpg" alt="Phim hoạt hình 2" />
+            <div class="movie-overlay">
+              <h3>Marsupilami</h3>
+              <button
+                class="play-btn"
+                onclick="window.location.href='marsu.html'"
+              >
+                <i class="fas fa-play"></i>
+                <p style="font-weight: bolder">Xem phim</p>
+              </button>
+            </div>
+          </div>
+          <div class="movie-item">
+            <img src="bbb.jpg" alt="Phim hoạt hình 3" />
+            <div class="movie-overlay">
+              <h3>Boboiboy Galaxy</h3>
+              <button
+                class="play-btn"
+                onclick="window.location.href='bbb.html'"
+              >
+                <i class="fas fa-play"></i>
+                <p style="font-weight: bolder">Xem phim</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Thêm vào sau phần similar-movies trong movie-details.html -->
+      <section class="reviews-section">
+        <h2 class="section-title">
+          <i class="fas fa-comments"></i> Đánh giá phim
+        </h2>
+
+        <!-- Form đánh giá -->
+        <div class="review-form">
+          <form id="reviewForm">
+            <div class="rating-input">
+              <span>Đánh giá: </span>
+              <div class="stars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+              <input type="hidden" id="ratingValue" name="rating" value="0" />
+            </div>
+            <textarea
+              name="comment"
+              placeholder="Viết bình luận của bạn..."
+              required
+            ></textarea>
+            <button type="submit" class="submit-review">Gửi đánh giá</button>
+          </form>
+        </div>
+
+        <!-- Danh sách đánh giá -->
+        <div class="reviews-list">
+          <h3>Đánh giá từ người xem</h3>
+          <div id="reviewsContainer">
+            <!-- Các đánh giá sẽ được thêm vào đây bằng JavaScript -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

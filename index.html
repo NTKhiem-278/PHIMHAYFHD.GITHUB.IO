@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhimHayFHD</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-top">
+        <div class="logo">
+          <h1>PhimHay<span>FHD</span></h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm phim, thể loại..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <button class="login-btn">
+            <i class="fas fa-user"></i> Đăng nhập
+          </button>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li class="active">
+            <a href="#"><i class="fas fa-home"></i> Trang chủ</a>
+          </li>
+<li>
+  <a href="favorite.html"><i class="fas fa-star"></i> Phim yêu thích</a>
+</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-container">
+      <!-- Sidebar thể loại -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h3><i class="fas fa-list"></i> Thể loại</h3>
+        </div>
+        <ul class="category-list">
+          <li>
+            <a href="#hanh-dong"><i class="fas fa-film"></i> Hành động</a>
+          </li>
+          <li>
+            <a href="#tam-ly"><i class="fas fa-heart"></i> Tâm lý</a>
+          </li>
+          <li>
+            <a href="#hoat-hinh"><i class="fas fa-bolt"></i> Hoạt hình</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Phần nội dung chính -->
+      <div class="content">
+        <div class="container">
+          <main class="main-content">
+            <section class="top-movies">
+              <h2 class="section-title">
+                <i class="fas fa-crown"></i> Top phim HOT
+              </h2>
+              <div class="movie-carousel">
+                <div class="movie-item">
+                  <div class="rank-badge">1st</div>
+                  <img src="sm1.webp" alt="Phim hành động 2" />
+                  <div class="movie-overlay">
+                    <h3>Spider-Man 2</h3>
+                    <button class="play-btn" onclick="window.location.href='movie-details.html?movie=sm1'">
+                      <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                    </button>
+                  </div>
+                </div>
+                <div class="movie-item">
+                  <div class="rank-badge">2nd</div>
+                  <img src="sl.jpg" alt="Phim hoạt hình 1" />
+                  <div class="movie-overlay">
+                    <h3>Solo Leveling</h3>
+                    <button class="play-btn" onclick="window.location.href='sl.html?movie=sl'">
+                      <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                    </button>
+                  </div>
+                </div>
+                <div class="movie-item">
+                  <div class="rank-badge">3rd</div>
+                  <img src="bm.avif" alt="Phim hành động 3" />
+                  <div class="movie-overlay">
+                    <h3>Batman</h3>
+                    <button class="play-btn" onclick="window.location.href='batman.html?movie=bm'">
+                      <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="featured-section">
+
+              <section class="movie-section" id="hanh-dong">
+                <h2 class="section-title">
+                  <i class="fas fa-film"></i> Phim hành động
+                </h2>
+                <div class="movie-carousel">
+                  <div class="movie-item">
+                    <img
+                      src="sm.avif"
+                      alt="Phim hành động 1"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Spider-Man 2</h3>
+                      <button class="play-btn" onclick="window.location.href='spiderman1.html?movie=sm'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="sm1.webp"
+                      alt="Phim hành động 2"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Spider-Man 2</h3>
+                      <button class="play-btn" onclick="window.location.href='movie-details.html?movie=sm1'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="bm.avif"
+                      alt="Phim hành động 3"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Batman</h3>
+                      <button class="play-btn" onclick="window.location.href='batman.html?movie=bm'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="j.webp"
+                      alt="Phim hành động 4"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Joker</h3>
+                      <button class="play-btn" onclick="window.location.href='joker.html?movie=j'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="movie-section" id="tam-ly">
+                <h2 class="section-title">
+                  <i class="fas fa-heart"></i> Phim tâm lý
+                </h2>
+                <div class="movie-carousel">
+                  <div class="movie-item">
+                    <img
+                      src="saclo.webp"
+                      alt="Phim tâm lý 1"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Sạc-lô<br>(Hài)</h3>
+                      <button class="play-btn" onclick="window.location.href='sacl.html?movie=saclo'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="a.jpg"
+                      alt="Phim tâm lý 2"
+                    />
+                    <div class="movie-overlay">
+                      <h3>
+                        An-na-beo<br>(Kinh dị)
+                      </h3>
+                      <button class="play-btn" onclick="window.location.href='annabelle.html?movie=a'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="movie-section" id="hoat-hinh">
+                <h2 class="section-title">
+                  <i class="fas fa-bolt"></i> Phim hoạt hình
+                </h2>
+                <div class="movie-carousel">
+                  <div class="movie-item">
+                    <img
+                      src="sl.jpg"
+                      alt="Phim hoạt hình 1"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Solo Leveling</h3>
+                      <button class="play-btn" onclick="window.location.href='sl.html?movie=sl'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="m.jpg"
+                      alt="Phim hoạt hình 2"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Marsupilami</h3>
+                      <button class="play-btn" onclick="window.location.href='marsu.html?movie=m'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="movie-item">
+                    <img
+                      src="bbb.jpg"
+                      alt="Phim hoạt hình 3"
+                    />
+                    <div class="movie-overlay">
+                      <h3>Boboiboy Galaxy</h3>
+                      <button class="play-btn" onclick="window.location.href='bbb.html?movie=bbb'">
+                        <i class="fas fa-play"></i> <p style="font-weight: bolder;" >Xem phim </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <aside class="right-sidebar">
+                <div class="sidebar-header">
+                  <h3>PHIM MỚI</h3>
+                </div>
+                <div class="vertical-scroll">
+                  <div class="scroll-item" onclick="window.location.href='movie-details.html?movie=sm1'">
+                    <img src="sm1.webp" alt="Phim moi 1">
+                    <div class="scroll-info">
+                      <h4>Spider-Man 2</h4>
+                    </div>
+                  </div>
+                  <div class="scroll-item" onclick="window.location.href='joker.html?movie=j'">
+                    <img src="j.webp" alt="Phim moi 2">
+                    <div class="scroll-info">
+                      <h4>Joker</h4>
+                    </div>
+                  </div>
+                  <div class="scroll-item" onclick="window.location.href='batman.html?movie=bm'">
+                    <img src="bm.avif" alt="Phim moi 3">
+                    <div class="scroll-info">
+                      <h4>Batman</h4>
+                    </div>
+                  </div>
+                  <div class="scroll-item" onclick="window.location.href='sl.html?movie=sl'">
+                    <img src="sl.jpg" alt="Phim moi 4">
+                    <div class="scroll-info">
+                      <h4>Solo Leveling</h4>
+                    </div>
+                  </div>
+                  <div class="scroll-item" onclick="window.location.href='spiderman1.html?movie=sm'">
+                    <img src="sm.avif" alt="Phim moi 5">
+                    <div class="scroll-info">
+                      <h4>Spider-Man 1</h4>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+</aside>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    </button>
+  </body>
+</html>

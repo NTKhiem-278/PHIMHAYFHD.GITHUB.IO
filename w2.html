@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhimHayFHD - Xem phim</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-top">
+        <div class="logo">
+          <h1>PhimHay<span>FHD</span></h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm phim, thể loại..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <button class="login-btn">
+            <i class="fas fa-user"></i> Đăng nhập
+          </button>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Trang chủ</a>
+          </li>
+          <li>
+            <a href="favorite.html"
+              ><i class="fas fa-star"></i> Phim yêu thích</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="movie-player-container">
+      <h1>Spider-Man 2</h1>
+      <div class="movie-player">
+        <video id="movieVideo" controls autoplay>
+          <source src="sm.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ video HTML5.
+        </video>
+      </div>
+
+      <div class="movie-info">
+        <div class="movie-actions">
+          <button id="addToFavoritesBtn" class="favorite-btn">
+            <i class="far fa-star"></i>
+            <span class="btn-text">Thêm vào yêu thích</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Xử lý nút yêu thích trên trang watch
+      document.addEventListener("DOMContentLoaded", function () {
+        const favBtn = document.getElementById("addToFavoritesBtn");
+        if (favBtn) {
+          const movieId = "sm1";
+          const movieTitle = "Spider-Man 2";
+          const movieImage = "sm1.webp";
+
+          // Cập nhật trạng thái nút
+          updateFavoriteButton(favBtn, movieId);
+
+          favBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            currentUser =
+              JSON.parse(localStorage.getItem("currentUser")) || null;
+
+            if (!currentUser) {
+              loginModal.style.display = "flex";
+              return;
+            }
+
+            const result = toggleFavorite(movieId, movieTitle, movieImage);
+            if (result.success) {
+              updateFavoriteButton(favBtn, movieId);
+            }
+          });
+        }
+
+        // Xử lý tự động phát video khi trang tải
+        const video = document.getElementById("movieVideo");
+        if (video) {
+          video.addEventListener("click", function () {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
