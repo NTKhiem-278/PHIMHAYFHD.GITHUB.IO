@@ -575,7 +575,7 @@ function displayFavorites() {
       <div class="movie-overlay">
         <h3>${movie.title}</h3>
         <div class="movie-actions">
-          <button class="play-btn" onclick="window.location.href='movie-details.html?movie=${movie.id}'">
+          <button class="play-btn" onclick="window.location.href='movie=${movie.id}'">
             <i class="fas fa-play"></i>
           </button>
           <button class="remove-btn" data-movie-id="${movie.id}">
